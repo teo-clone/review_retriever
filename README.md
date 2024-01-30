@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Review Retriever is an app that fetches, stores, and displays reviews from the past 48 hours for App Store apps.
 
-## Getting Started
+## Running Review Retriever Locally
 
-First, run the development server:
+To run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will then be reachable on your browser at [localhost:3000](localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## If you want to change the app that is fetched
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+By default, the application fetches reviews for Snapchat.
 
-## Learn More
+If you want to fetch reviews for a different app, change the value of appId inside of app/page.tsx.
 
-To learn more about Next.js, take a look at the following resources:
+You can find your appId in its App Store url. For example, Snapchat's App Store url is: [apps.apple.com/us/app/snapchat/id447188370](https://apps.apple.com/us/app/snapchat/id447188370) which makes its id: 447188370.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Current limitations / Future improvements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+* The app should allow users to change the appId from within the UI. Probably through the use of a form which has a text input and fetch button.
 
-## Deploy on Vercel
+* The App Store RSS url used only returns the 50 most recent reviews for an app. If there are more than 50 reviews in the past 48 hours, results displayed are likely to be somewhat inaccurate.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Acknowledgements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Built using Next.js, Tailwindcss, and Prisma
