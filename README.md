@@ -8,7 +8,7 @@ To run the development server:
 npm run dev
 ```
 
-The app will then be reachable on your browser at [localhost:3000](localhost:3000)
+The app will then be reachable on your browser at [localhost:3000](http://localhost:3000)
 
 ## If you want to change the app that is fetched
 
