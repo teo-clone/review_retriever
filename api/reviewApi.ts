@@ -42,15 +42,17 @@ export async function updateReviewsInDb(app: App): Promise<void> {
         })
     }
 
-    // set that we just updated the app...
-    await prisma.app.update({
-        where: {
-            id: app.id
-        },
-        data: {
-            lastUpdated: new Date()
-        }
-    })
+    // if any new reviews were added, update the lastUpdated time on the app
+    if (reviewsToAddToDb.length > 0) {
+        await prisma.app.update({
+            where: {
+                id: app.id
+            },
+            data: {
+                lastUpdated: new Date()
+            }
+        })
+    }
 }
 
 /**
