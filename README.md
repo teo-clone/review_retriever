@@ -2,10 +2,11 @@ Review Retriever is an app that fetches, stores, and displays reviews from the p
 
 ## Running Review Retriever Locally
 
-If running for the first time, make sure to install dependencies:
+If running for the first time, make sure to install dependencies and initialize prisma:
 
 ```bash
 npm install
+npx prisma db push
 ```
 
 To run the development server:
