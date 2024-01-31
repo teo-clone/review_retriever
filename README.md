@@ -2,6 +2,12 @@ Review Retriever is an app that fetches, stores, and displays reviews from the p
 
 ## Running Review Retriever Locally
 
+If running for the first time, make sure to install dependencies:
+
+```bash
+npm install
+```
+
 To run the development server:
 
 ```bash
