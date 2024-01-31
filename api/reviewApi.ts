@@ -11,7 +11,7 @@ import { App, Review } from "@prisma/client";
 export async function updateReviewsInDb(app: App): Promise<void> {
     const req = `https://itunes.apple.com/us/rss/customerreviews/id=${app.id}/sortBy=mostRecent/page=1/json`;
 
-    const res = await fetch(req);
+    const res = await fetch(req, { cache: 'no-store' });
 
     if (!res.ok) {
         throw new Error('Failed to fetch reviews');
